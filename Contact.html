@@ -1,0 +1,78 @@
+    <html>
+    <head>
+        <title> Contact </title>
+        <style>
+            body{
+                background-color: #D9AFD9;
+                background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+            }
+        </style>
+        <div class = "header">
+            <h1> Contact Me </h1>
+        </div>
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+        <div class = "main">
+            <nav>
+                <div class = "nav-links">
+                    <ul>
+                        <li><a href = "index.html"> Home </a></li>
+                        <li><a href = "AboutMe.html"> About Me </a></li>
+                        <li><a href = "Tech Blogs.html"> Tech Blogs </a></li>
+                        <li><a href = "Contact.html"> Contact Me </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        </body>
+        <body>
+        <h4> Please use the following form below to contact me anytime! I would love to hear your thoughts on my blogs, Computer Science, or anything else!</h4>
+        <div class = "form1">
+        <form method="post" id="contact">
+            <div class = "form">
+            <p>
+                Name: <input type="text" name="name" id="name" required />
+            <p>
+                Email: <input type="email" name="email" id="email" required />
+            </p>
+                Message: <textarea name="message" id="message"></textarea>
+            <button type="submit" name="submit">Submit</button>
+        </div>
+        </form>
+    </div>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+            import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+             
+            // Paste the code from Firebase
+            const firebaseConfig = {
+                apiKey: "XXXXXXXXXXXX",
+                authDomain: "XXXXXXXXXXXX",
+                databaseURL: "XXXXXXXXXXXX",
+                 projectId: "XXXXXXXXXXXX",
+                storageBucket: "XXXXXXXXXXXX",
+                messagingSenderId: "XXXXXXXXXXXX",
+                appId: "XXXXXXXXXXXX"
+            };
+             
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+             
+            // Get a reference to the database service
+            const db = getDatabase(app);
+             
+            document.getElementById('contact').addEventListener('submit', function(e) {
+                e.preventDefault();
+                set(ref(db, (Math.random() + 1).toString(36).substring(7)), {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+                });
+                alert('Your response has been recorded');
+                document.getElementById('contact').reset();
+            });
+            </script>
+</body>
+</html>

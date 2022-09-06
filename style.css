@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url(Myfont-Regular.ttf);
+}
+*{
+    margin: 0.1rem;
+    padding: 0.2rem;
+    font-family: 'MyFont';
+}
+
+.main {
+    width: 100%;
+    height: 100%vh;
+}
+
+.header{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    font-size: 40px;
+
+}
+
+nav {
+    width: 90%;
+    position: sticky;
+    margin: auto;
+    z-index: 1;
+    display: flex;
+    height: 5px;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+    padding: 1rem;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-links ul li a {
+    font-size: 25;
+    border: none;
+}
+
+.img {
+    padding: 3rem;
+    padding-left: 13rem;
+}
+.card{
+    max-width: 50%;
+    height: 675px;
+    border-style: dashed;
+    border-width: 5px;
+    padding: 0.5rem;
+}
+
+.cwru {
+    position: absolute;
+    top: 310px;
+    right: 230px;
+    
+}
+
+.cwruImg{
+    max-width: 90%;
+    height: 300px;
+    border-style: dashed;
+    border-width: 5px;
+    padding: 0.5rem;
+}
+
+.cs{
+    position: absolute;
+    bottom: -190px;
+    right: 100px;
+}
+
+.tech{
+    max-width: 70%;
+    max-height: 80%;
+    height: 300px;
+    border-style: dashed;
+    border-width: 5px;
+    padding: 0.5rem;
+}
+
+.descriptionBody{
+    font-size: xx-large;
+    padding: 2rem;
+    text-align: center;
+    border-style: solid;
+    border-width: 6px
+}
+
+h2{
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 40px;
+}
+
+.card1{
+    position: absolute;
+    max-width: 30%;
+    max-height: 50%;
+    padding-left: 30rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+}
+
+.form{
+    justify-content: center;
+    height: 70vh;
+    display: flex;
+    background: lightcoral;
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    border-radius: 15px;
+    font-size: x-large;
+}
+
+.form1{
+    padding-left: 450;
+}
+
+form input, form textarea{
+    background: white;
+    border: none;
+    margin: 15px 2px;
+    padding: 25px;
+    font-size: 30px;
+}
+
+form button{
+    background: grey;
+    cursor: pointer;
+    font-size: 20px;
+    width: 120px;
+    margin: 20px auto 0;
+    border-radius: 20px;
+
+}
+form button:hover{
+    background-color: lightgray;
+    border-bottom: 3px solid grey;
+}
+h4{
+    padding-top: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    font-size: 40px;
+    text-align: center;
+}
+
+.abt-me {
+    list-style-type: square;
+    font-size: xx-large;
+    padding-top: 32rem
+}
+
+.techblogTitle{
+    padding-left: 2rem;
+    padding-top: 1rem;
+    font-size: 40px;
+}
+
+.techblog{
+    padding-left: 2rem;
+    font-size: 25px;
+}
